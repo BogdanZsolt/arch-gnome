@@ -24,9 +24,7 @@ sudo pacman -S --noconfirm --needed gnome-screenshot
 
 echo "Installing category Development"
 
-sudo pacman -S --noconfirm --needed atom
-sudo pacman -S --noconfirm --needed geany
-sudo pacman -S --noconfirm --needed meld
+sudo pacman -S --noconfirm --needed code
 
 echo "Installing category Graphics"
 

@@ -24,10 +24,6 @@ sleep 5
 #only if you run into issues with that
 #sudo mount -o remount,size=5G,noatime /tmp
 
-echo "Installing category Development"
-
-sh AUR/install-sublime-text-v*.sh
-
 echo "Installing category System"
 
 sh AUR/install-downgrade-v*.sh
@@ -40,7 +36,11 @@ sh AUR/install-screenkey-git-v*.sh
 sh AUR/install-the-platinum-searcher-bin-v*.sh
 sh AUR/install-ttf-font-awesome-v*.sh
 sh AUR/install-ttf-mac-fonts-v*.sh
+sh AUR/install-ttf-cascadia-code-fonts-v*.sh
+sh AUR/install-ttf-hack-fonts-v*.sh
 sh AUR/install-xcursor-breeze-v*.sh
+sh AUR/install-chromium-widevine-v*.sh
+sh AUR/install-google-chrome-v*.sh
 
 # these come always last
 
