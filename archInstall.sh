@@ -19,7 +19,9 @@ mkdir /mnt/boot
 mkdir /mnt/home
 mount /dev/sda3 /mnt/home
 nano /etc/pacman.d/mirrorlist
-pacstrap /mnt base base-devel linux-lts linux-lts-headers
+pacstrap /mnt base base-devel linux-lts linux-lts-headers linux-firmware
+pacstrap /mnt cryptsetup device-mapper dhcpcd diffutils e2fsprogs inetutils jfsutils less logrotate lvm2 man-db man-pages mdadm nano netctl perl reiserfsprogs s-nail
+pacstrap /mnt sysfsutils textinfo usbutils vi which xfsprogs
 genfstab -U /mnt >> /mnt/etc/fstab
 ln -sf /mnt/usr/share/zoneinfo/Europe/Budapest /mnt/etc/localtime
 hwclock --systohc
