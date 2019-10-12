@@ -5,7 +5,7 @@ loadkeys hu
 timedatectl set-ntp true
 pacman -Syy
 pacman -S --noconfirm reflector  
-sudo reflector --protocol https --latest 50 --number 20 --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --protocol https --country Hungary --country Germany --country Netherland --latest 50 --number 20 --sort rate --save /etc/pacman.d/mirrorlist
 wipefs -a /dev/sda
 parted /dev/sda mklabel gpt
 sgdisk /dev/sda -n=1:0:+512M -t=1:ef00
@@ -49,7 +49,7 @@ cat << EOF >> /mnt/etc/hosts
 127.0.0.1 LucykaNotebook02.localdomain LucykaNotebook02
 EOF
 pacstrap /mnt networkmanager
-sed -i 's/HOOKS="base udev autodetect modconf block keyboard keymap filesystems fsck"/HOOKS="base udev autodetect modconf block keyboard keymap filesystems fsck shutdown"/' /mnt/etc/mkinitcpio.conf
+sed -i 's/HOOKS=(base udev autodetect modconf block filesystems keyboard fsck)/HOOKS=(base udev autodetect modconf block filesystems keyboard fsck shutdown)/g' /mnt/etc/mkinitcpio.conf
 nano /mnt/etc/mkinitcpio.conf
 cat << EOF > /mnt/root/archInstallPhase2.sh
 #!/bin/bash
