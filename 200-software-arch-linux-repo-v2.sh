@@ -51,6 +51,7 @@ sudo pacman -S --noconfirm --needed dmidecode
 sudo pacman -S --noconfirm --needed ffmpegthumbnailer
 sudo pacman -S --noconfirm --needed git
 sudo pacman -S --noconfirm --needed glances
+sudo pacman -S --noconfirm --needed reflector 
 sudo pacman -S --noconfirm --needed gnome-disk-utility
 sudo pacman -S --noconfirm --needed gnome-keyring
 sudo pacman -S --noconfirm --needed gnome-system-monitor
