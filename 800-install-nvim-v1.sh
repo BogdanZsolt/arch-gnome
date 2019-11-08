@@ -6,6 +6,11 @@ sudo pacman -S --noconfirm --needed neovim
 sudo pacman -S --noconfirm --needed nodejs npm python2-pip python-pip
 sudo npm install -g neovim
 sudo npm install -g yarn
+sudo npm install -g browser-sync
+
+#export SERVER_IP=`hostname -I`
+#alias serve="browser-sync start --server --files . --no-notify --host $SERVER_IP --port 9000"
+
 pip install --user pynvim
 pip2 install --user pynvim
 cp Personal/.vimrc $HOME"/.vimrc"
