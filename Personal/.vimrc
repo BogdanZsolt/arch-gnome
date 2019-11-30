@@ -26,6 +26,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet.vim' | Plug 'Shougo/neosnippet-snippets'
 Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'tbodt/deoplete-tabnine', { 'do': './install.sh' } "https://tabnine.com/
 Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
 Plug 'mattn/emmet-vim'
 Plug 'w0rp/ale'
@@ -91,6 +92,12 @@ function! s:denite_my_settings() abort
     nnoremap <silent><buffer><expr> <Space>
                 \ denite#do_map('toggle_select').'j'
 endfunction
+
+"deoplete-tabnine config
+call deoplete#custom#var('tabnine', {
+\ 'line_limit': 500,
+\ 'max_num_results': 20,
+\ })
 
 "basic config
 filetype plugin on

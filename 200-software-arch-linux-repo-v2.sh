@@ -34,7 +34,6 @@ sudo pacman -S --noconfirm --needed ristretto
 
 echo "Installing category Internet"
 
-sudo pacman -S --noconfirm --needed chromium
 sudo pacman -S --noconfirm --needed firefox
 
 echo "Installing category Multimedia"
