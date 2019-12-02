@@ -44,6 +44,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'chiel92/vim-autoformat'
 Plug 'Yggdroot/indentLine'
 Plug 'shougo/denite.nvim'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
