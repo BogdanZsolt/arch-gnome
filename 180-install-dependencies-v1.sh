@@ -8,8 +8,8 @@ set -e
 
 echo "Install utilities"
 echo
-echo "polybar popup-calendar dependencies"
-trizen -S --noconfirm --needed yad 
+#echo "polybar popup-calendar dependencies"
+#trizen -S --noconfirm --needed yad 
 sudo pacman -S --noconfirm --needed xdotool
 echo
 echo "vlc chromecast dependencies"
