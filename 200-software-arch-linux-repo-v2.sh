@@ -2,29 +2,20 @@
 set -e
 ##################################################################################################################
 # Author	:	Erik Dubois
-# Website	:	https://www.erikdubois.be
-# Website	:	https://www.arcolinux.info
-# Website	:	https://www.arcolinux.com
-# Website	:	https://www.arcolinuxd.com
-# Website	:	https://www.arcolinuxb.com
-# Website	:	https://www.arcolinuxiso.com
-# Website	:	https://www.arcolinuxforum.com
-##################################################################################################################
-#
-#   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
-#
 ##################################################################################################################
 
-# software from standard Arch Linux repositories
-# Core, Extra, Community, Multilib repositories
 echo "Installing category Accessories"
 
+sudo pacman -S --noconfirm --needed gnome-multi-writer
+sudo pacman -S --noconfirm --needed gnome-pie
 sudo pacman -S --noconfirm --needed galculator
 sudo pacman -S --noconfirm --needed gnome-screenshot
 
 echo "Installing category Development"
 
-sudo pacman -S --noconfirm --needed code
+sh AUR/install-code-v*.sh
+#sh AUR/install-sublime-text-v*.sh
+#sudo pacman -S --noconfirm --needed atom
 
 echo "Installing category Graphics"
 
@@ -34,23 +25,48 @@ sudo pacman -S --noconfirm --needed ristretto
 
 echo "Installing category Internet"
 
+sh AUR/install-google-chrome-v*.sh
+sh AUR/install-chromium-widevine-v*.sh
+#sh AUR/install-brave-bin-v*.sh
+sudo pacman -S --noconfirm --needed chromium
+sudo pacman -S --noconfirm --needed firefox
 sudo pacman -S --noconfirm --needed firefox
 
 echo "Installing category Multimedia"
 
+#sh AUR/install-spotify-v*.sh
+#sudo pacman -S --noconfirm --needed krita
+#sudo pacman -S --noconfirm --needed kdenlive
+sudo pacman -S --noconfirm --needed gnome-mplayer
 sudo pacman -S --noconfirm --needed simplescreenrecorder
 sudo pacman -S --noconfirm --needed vlc
 
+echo "Installing category Other"
+
 echo "Installing category System"
 
+#sh AUR/install-ulauncher-v*.sh
+sh AUR/install-appimagelauncher-git-v*.sh
+sh AUR/install-downgrade-v*.sh
+#sh AUR/install-caffeine-ng-v*.sh
+sh AUR/install-pamac-aur-v*.sh
+sh AUR/install-tela-icon-theme-git-v*.sh
+sh AUR/install-inxi-v*.sh
+sh AUR/install-screenkey-git-v*.sh
+sh AUR/install-xcursor-breeze-v*.sh
+sh AUR/install-yad-v*.sh
+sudo pacman -S --noconfirm --needed arc-gtk-theme
+sudo pacman -S --noconfirm --needed adapta-gtk-theme
+sudo pacman -S --noconfirm --needed materia-gtk-theme
+sudo pacman -S --noconfirm --needed papirus-icon-theme
+sudo pacman -S --noconfirm --needed archlinux-wallpaper
 sudo pacman -S --noconfirm --needed accountsservice
-sudo pacman -S --noconfirm --needed curl
 sudo pacman -S --noconfirm --needed dconf-editor
+sudo pacman -S --noconfirm --needed reflector 
+sudo pacman -S --noconfirm --needed albert muparser
 sudo pacman -S --noconfirm --needed dmidecode
 sudo pacman -S --noconfirm --needed ffmpegthumbnailer
-sudo pacman -S --noconfirm --needed git
 sudo pacman -S --noconfirm --needed glances
-sudo pacman -S --noconfirm --needed reflector 
 sudo pacman -S --noconfirm --needed gnome-disk-utility
 sudo pacman -S --noconfirm --needed gnome-keyring
 sudo pacman -S --noconfirm --needed gnome-system-monitor
@@ -61,32 +77,33 @@ sudo pacman -S --noconfirm --needed gtk-engine-murrine
 sudo pacman -S --noconfirm --needed gvfs gvfs-mtp
 sudo pacman -S --noconfirm --needed hardinfo
 sudo pacman -S --noconfirm --needed hddtemp
-sudo pacman -S --noconfirm --needed htop
 sudo pacman -S --noconfirm --needed kvantum-qt5
 sudo pacman -S --noconfirm --needed kvantum-theme-arc
 sudo pacman -S --noconfirm --needed lm_sensors
 sudo pacman -S --noconfirm --needed lsb-release
 sudo pacman -S --noconfirm --needed mlocate
 sudo pacman -S --noconfirm --needed net-tools
-sudo pacman -S --noconfirm --needed noto-fonts
 sudo pacman -S --noconfirm --needed polkit-gnome
 sudo pacman -S --noconfirm --needed qt5ct
 sudo pacman -S --noconfirm --needed sane
-sudo pacman -S --noconfirm --needed screenfetch
 sudo pacman -S --noconfirm --needed scrot
 sudo pacman -S --noconfirm --needed simple-scan
 sudo pacman -S --noconfirm --needed sysstat
-sudo pacman -S --noconfirm --needed ttf-ubuntu-font-family
-sudo pacman -S --noconfirm --needed ttf-droid
 sudo pacman -S --noconfirm --needed tumbler
 sudo pacman -S --noconfirm --needed vnstat
-sudo pacman -S --noconfirm --needed wget
 sudo pacman -S --noconfirm --needed wmctrl
 sudo pacman -S --noconfirm --needed unclutter
-sudo pacman -S --noconfirm --needed rxvt-unicode
-sudo pacman -S --noconfirm --needed urxvt-perls
 sudo pacman -S --noconfirm --needed xdg-user-dirs
-sudo pacman -S --noconfirm --needed albert
+sudo pacman -S --noconfirm --needed xdo
+sudo pacman -S --noconfirm --needed xdotool
+sudo pacman -S --noconfirm --needed libmicrodns
+sudo pacman -S --noconfirm --needed protobuf
+sudo pacman -S --noconfirm --needed zenity
+sudo pacman -S --noconfirm --needed imagemagick
+sudo pacman -S --noconfirm --needed w3m
+sudo pacman -S --noconfirm --needed chrome-gnome-shell
+sudo pacman -S --noconfirm --needed nautilus-image-converter
+sudo pacman -S --noconfirm --needed tilda
 
 ###############################################################################################
 
@@ -95,7 +112,11 @@ sudo pacman -S --noconfirm --needed unace unrar zip unzip sharutils  uudeview  a
 
 ###############################################################################################
 
+# these come always last
+
+sh AUR/install-hardcode-fixer-git-v*.sh
+sudo hardcode-fixer
 
 echo "################################################################"
-echo "#### Software from standard Arch Linux Repo installed  #########"
+echo "################# Arch Linux Software installed ################"
 echo "################################################################"

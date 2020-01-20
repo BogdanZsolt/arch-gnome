@@ -1,4 +1,6 @@
 #!/bin/bash
+# credits to Soehub
+# https://gist.github.com/soehub/fc07b86e2292c562328ee0dc2aadf740
 set -e
 ##################################################################################################################
 # Author	:	Erik Dubois
@@ -6,8 +8,6 @@ set -e
 # Website	:	https://www.arcolinux.info
 # Website	:	https://www.arcolinux.com
 # Website	:	https://www.arcolinuxd.com
-# Website	:	https://www.arcolinuxb.com
-# Website	:	https://www.arcolinuxiso.com
 # Website	:	https://www.arcolinuxforum.com
 ##################################################################################################################
 #
@@ -15,23 +15,20 @@ set -e
 #
 ##################################################################################################################
 
-# software from AUR (Arch User Repositories)
-# https://aur.archlinux.org/packages/
+numberofcores=$(grep -c ^processor /proc/cpuinfo)
 
-echo "DESKTOP SPECIFIC APPLICATIONS"
+if [ $numberofcores -gt 1 ]
+then
+        echo "You have " $numberofcores" cores."
+        echo "Changing the makeflags for "$numberofcores" cores."
+        sudo sed -i 's/#MAKEFLAGS="-j2"/MAKEFLAGS="-j'$(($numberofcores+1))'"/g' /etc/makepkg.conf;
+        echo "Changing the compression settings for "$numberofcores" cores."
+        sudo sed -i 's/COMPRESSXZ=(xz -c -z -)/COMPRESSXZ=(xz -c -T '"$numberofcores"' -z -)/g' /etc/makepkg.conf
+else
+        echo "No change."
+fi
 
-echo "Installing category Accessories"
-
-sudo pacman -S --noconfirm --needed gnome-multi-writer
-sudo pacman -S --noconfirm --needed gnome-pie
-sudo pacman -S --noconfirm --needed galculator
-
-echo "Installing category System"
-
-sudo pacman -S imagemagick --noconfirm --needed
-sudo pacman -S w3m --noconfirm --needed
-sudo pacman -S --noconfirm --needed nautilus-image-converter
 
 echo "################################################################"
-echo "####    Software from Arch Linux Repository installed     ######"
+echo "###  All cores will be used during building and compression ####"
 echo "################################################################"
