@@ -6,8 +6,8 @@ set -e
 
 echo "Installing category Accessories"
 
-sudo pacman -S --noconfirm --needed gnome-multi-writer
-sudo pacman -S --noconfirm --needed gnome-pie
+#sudo pacman -S --noconfirm --needed gnome-multi-writer
+#sudo pacman -S --noconfirm --needed gnome-pie
 sudo pacman -S --noconfirm --needed galculator
 sudo pacman -S --noconfirm --needed gnome-screenshot
 
@@ -21,7 +21,7 @@ echo "Installing category Graphics"
 
 sudo pacman -S --noconfirm --needed gnome-font-viewer
 sudo pacman -S --noconfirm --needed gpick
-sudo pacman -S --noconfirm --needed ristretto
+#sudo pacman -S --noconfirm --needed ristretto
 
 echo "Installing category Internet"
 
@@ -30,14 +30,12 @@ sh AUR/install-chromium-widevine-v*.sh
 #sh AUR/install-brave-bin-v*.sh
 sudo pacman -S --noconfirm --needed chromium
 sudo pacman -S --noconfirm --needed firefox
-sudo pacman -S --noconfirm --needed firefox
 
 echo "Installing category Multimedia"
 
 #sh AUR/install-spotify-v*.sh
 #sudo pacman -S --noconfirm --needed krita
 #sudo pacman -S --noconfirm --needed kdenlive
-sudo pacman -S --noconfirm --needed gnome-mplayer
 sudo pacman -S --noconfirm --needed simplescreenrecorder
 sudo pacman -S --noconfirm --needed vlc
 
@@ -48,7 +46,6 @@ echo "Installing category System"
 #sh AUR/install-ulauncher-v*.sh
 sh AUR/install-appimagelauncher-git-v*.sh
 sh AUR/install-downgrade-v*.sh
-#sh AUR/install-caffeine-ng-v*.sh
 sh AUR/install-pamac-aur-v*.sh
 sh AUR/install-tela-icon-theme-git-v*.sh
 sh AUR/install-inxi-v*.sh
@@ -74,7 +71,8 @@ sudo pacman -S --noconfirm --needed gnome-tweak-tool
 sudo pacman -S --noconfirm --needed gparted
 sudo pacman -S --noconfirm --needed grsync
 sudo pacman -S --noconfirm --needed gtk-engine-murrine
-sudo pacman -S --noconfirm --needed gvfs gvfs-mtp
+sudo pacman -S --noconfirm --needed gvfs 
+sudo pacman -S --noconfirm --needed gvfs-mtp
 sudo pacman -S --noconfirm --needed hardinfo
 sudo pacman -S --noconfirm --needed hddtemp
 sudo pacman -S --noconfirm --needed kvantum-qt5
@@ -103,7 +101,8 @@ sudo pacman -S --noconfirm --needed imagemagick
 sudo pacman -S --noconfirm --needed w3m
 sudo pacman -S --noconfirm --needed chrome-gnome-shell
 sudo pacman -S --noconfirm --needed nautilus-image-converter
-sudo pacman -S --noconfirm --needed tilda
+sudo pacman -S --noconfirm --needed nautilus-terminal
+sudo pacman -S --noconfirm --needed guake
 
 ###############################################################################################
 
