@@ -23,15 +23,15 @@ echo "#################################################"
 sudo pacman -Syyu --noconfirm
 
 #installing displaymanager or login manager
-sudo pacman -S --noconfirm --needed gdm
-#sudo pacman -S --noconfirm --needed lightdm
-#sudo pacman -S --noconfirm --needed lightdm-gtk-greeter lightdm-gtk-greeter-settings
+sh AUR/install-lightdm-slick-greeter-v1.sh
+sh AUR/install-lightdm-settings-v1.sh
+sudo pacman -S --noconfirm --needed lightdm
 
 #installing desktop environment
 sudo pacman -S gnome --noconfirm --needed
 
 #enabling displaymanager or login manager
-sudo systemctl enable gdm.service -f
+sudo systemctl enable lightdm.service -f
 sudo systemctl set-default graphical.target
 
 
