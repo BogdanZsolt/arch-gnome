@@ -33,7 +33,7 @@ sudo pacman -S --noconfirm --needed firefox
 
 echo "Installing category Multimedia"
 
-#sh AUR/install-spotify-v*.sh
+sh AUR/install-spotify-v*.sh
 #sudo pacman -S --noconfirm --needed krita
 #sudo pacman -S --noconfirm --needed kdenlive
 sudo pacman -S --noconfirm --needed simplescreenrecorder
@@ -52,11 +52,14 @@ sh AUR/install-inxi-v*.sh
 sh AUR/install-screenkey-git-v*.sh
 sh AUR/install-xcursor-breeze-v*.sh
 sh AUR/install-yad-v*.sh
+sh AUR/install-korla-icon-theme-v1.sh
+sh AUR/install-yaru-sound-theme-v1.sh
 sudo pacman -S --noconfirm --needed arc-gtk-theme
 sudo pacman -S --noconfirm --needed adapta-gtk-theme
 sudo pacman -S --noconfirm --needed materia-gtk-theme
 sudo pacman -S --noconfirm --needed papirus-icon-theme
 sudo pacman -S --noconfirm --needed archlinux-wallpaper
+sudo pacman -S --noconfirm --needed capitaine-cursors
 sudo pacman -S --noconfirm --needed accountsservice
 sudo pacman -S --noconfirm --needed dconf-editor
 sudo pacman -S --noconfirm --needed reflector 
@@ -102,7 +105,7 @@ sudo pacman -S --noconfirm --needed w3m
 sudo pacman -S --noconfirm --needed chrome-gnome-shell
 sudo pacman -S --noconfirm --needed nautilus-image-converter
 sudo pacman -S --noconfirm --needed nautilus-terminal
-sudo pacman -S --noconfirm --needed guake
+sudo pacman -S --noconfirm --needed tilda
 
 ###############################################################################################
 

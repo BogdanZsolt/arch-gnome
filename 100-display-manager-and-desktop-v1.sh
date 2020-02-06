@@ -23,9 +23,8 @@ echo "#################################################"
 sudo pacman -Syyu --noconfirm
 
 #installing displaymanager or login manager
-sh AUR/install-lightdm-slick-greeter-v1.sh
-sh AUR/install-lightdm-settings-v1.sh
 sudo pacman -S --noconfirm --needed lightdm
+sudo pacman -S --noconfirm --needed lightdm-gtk-greeter lightdm-gtk-greeter-settings
 
 #installing desktop environment
 sudo pacman -S gnome --noconfirm --needed
@@ -34,7 +33,10 @@ sudo pacman -S gnome --noconfirm --needed
 sudo systemctl enable lightdm.service -f
 sudo systemctl set-default graphical.target
 
+#installing displaymanager or login manager
+sh AUR/install-lightdm-slick-greeter-v1.sh
+sh AUR/install-lightdm-settings-v1.sh
 
-#Remove anything you do not like from the installed applications
-
-#sudo pacman -R ...
+if pacman -Qi lightdm-slick-greeter &> /dev/null; then
+    sudo sed -i 's/#greeter-session=example-gtk-gnome/greeter-session=lightdm-slick-greeter/g' /etc/lightdm/lightdm.conf
+fi
