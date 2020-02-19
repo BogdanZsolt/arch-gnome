@@ -32,6 +32,7 @@ sudo pacman -S --noconfirm --needed ttf-roboto
 sudo pacman -S --noconfirm --needed ttf-ubuntu-font-family
 sudo pacman -S --noconfirm --needed tamsyn-font
 sudo pacman -S --noconfirm --needed ttf-cascadia-code
+sudo pacman -S --noconfirm --needed ttf-jetbrains-mono
 
 sh AUR/install-ttf-font-awesome-v*.sh
 sh AUR/install-ttf-mac-fonts-v*.sh

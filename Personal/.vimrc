@@ -44,9 +44,13 @@ Plug 'airblade/vim-gitgutter'
 Plug 'chiel92/vim-autoformat'
 Plug 'Yggdroot/indentLine'
 Plug 'shougo/denite.nvim'
-Plug 'ryanoasis/vim-devicons'
+"Plug 'ryanoasis/vim-devicons'
+Plug 'sbdchd/vim-run'
 
 call plug#end()
+
+"run python code
+noremap <F5> :Run<CR>
 
 "NERDTree config
 nmap <C-o> :NERDTreeToggle<CR>
