@@ -1,0 +1,10 @@
+Auto Move Windows
+Caffeine
+Clipboard indicator
+Dash to dock
+KStatusNotifierItem/AppIndicator Support
+Native Window Placement
+OpenWeather
+Pamac Updates Indicator
+User Themes
+
