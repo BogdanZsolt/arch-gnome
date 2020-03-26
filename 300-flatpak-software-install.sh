@@ -23,8 +23,8 @@ else
 fi
 
 #flatpak install flathub io.github.liberodark.OpenDrive
-flatpak install flathub com.bitwarden.desktop
-flatpak install flathub com.spotify.Client
+#flatpak install flathub com.bitwarden.desktop
+#flatpak install flathub com.spotify.Client
 flatpak install flathub org.inkscape.Inkscape
 #flatpak install flathub org.kde.krita
 #flatpak install flathub org.kde.kdenlive
