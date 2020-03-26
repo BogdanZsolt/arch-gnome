@@ -44,7 +44,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'chiel92/vim-autoformat'
 Plug 'Yggdroot/indentLine'
 Plug 'shougo/denite.nvim'
-"Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 Plug 'sbdchd/vim-run'
 
 call plug#end()
@@ -52,7 +52,11 @@ call plug#end()
 "run python code
 noremap <F5> :Run<CR>
 
+"devicons
+let g:webdevicons_enable = 1
+
 "NERDTree config
+let g:webdevicons_enable_nerdtree = 1
 nmap <C-o> :NERDTreeToggle<CR>
 
 " Use deoplete.
@@ -84,6 +88,7 @@ let g:minimap_toggle='<leader>mt'
 noremap <F3> :Autoformat<CR>
 
 "Denite config
+let g:webdevicons_enable_denite = 1
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
     nnoremap <silent><buffer><expr> <CR>
@@ -111,6 +116,8 @@ filetype plugin on
 syntax on set number
 set number
 set relativenumber
+set encoding=utf-8
+"set guifont=DroidSansMono\ Nerd\ Font\ 11
 set incsearch
 set ignorecase
 set smartcase
@@ -128,6 +135,9 @@ set cursorline
 
 "colors
 syntax enable
+let g:airline_powerline_fonts=1
+let g:webdevicons_enable_airline_tabline = 1
+let g:webdevicons_enable_airline_statusline = 1
 let g:airline_theme='luna'
 "Enable true color
 if exists('+termguicolors')
