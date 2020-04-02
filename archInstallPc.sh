@@ -17,9 +17,7 @@ mkfs.ext4 /dev/sda3
 mount /dev/sda2 /mnt
 mkdir /mnt/boot
 mkdir /mnt/home
-mkdir /mnt/home/media
 mount /dev/sda3 /mnt/home
-mount /dev/sdb1 /mnt/home/media
 nano /etc/pacman.d/mirrorlist
 pacstrap /mnt base base-devel linux-lts linux-lts-headers linux-firmware
 pacstrap /mnt dhcpcd e2fsprogs inetutils man-db man-pages nano netctl s-nail usbutils 
@@ -109,7 +107,7 @@ echo trizen -Suyy >> /home/shiru/temp/archInstallPhase4.sh
 echo trizen -S yay --noconfirm >> /home/shiru/temp/archInstallPhase4.sh
 echo sudo pacman -S xorg-server xorg-apps xorg-xinit xterm --noconfirm >> /home/shiru/temp/archInstallPhase4.sh
 #echo sudo pacman -S vulkan-intel --noconfirm >> /home/shiru/temp/archInstallPhase4.sh
-echo sudo pacman -S --noconfirm --needed nvidia nvidia-utils lib32-nvidia-utils >> /home/shiru/temp/archInstallPhase4.sh
+echo sudo pacman -S --noconfirm --needed nvidia-lts nvidia-utils lib32-nvidia-utils >> /home/shiru/temp/archInstallPhase4.sh
 echo sudo mv /home/shiru/temp/00-keyboard.conf /etc/X11/xorg.conf.d/00-keyboard.conf >> /home/shiru/temp/archInstallPhase4.sh
 echo rm -rf /home/shiru/temp/trizen >> /home/shiru/temp/archInstallPhase4.sh 
 echo rm /home/shiru/temp/archInstallPhase4.sh >> /home/shiru/temp/archInstallPhase4.sh 
