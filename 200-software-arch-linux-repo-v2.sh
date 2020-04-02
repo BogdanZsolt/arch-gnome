@@ -47,7 +47,7 @@ echo "Installing category System"
 sh AUR/install-appimagelauncher-git-v*.sh
 sh AUR/install-downgrade-v*.sh
 sh AUR/install-pamac-aur-v*.sh
-sh AUR/install-tela-icon-theme-git-v*.sh
+sh AUR/install-tela-icon-theme-v*.sh
 sh AUR/install-inxi-v*.sh
 sh AUR/install-screenkey-git-v*.sh
 sh AUR/install-xcursor-breeze-v*.sh
