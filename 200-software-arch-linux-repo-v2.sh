@@ -53,7 +53,7 @@ sh AUR/install-screenkey-git-v*.sh
 sh AUR/install-xcursor-breeze-v*.sh
 sh AUR/install-yad-v*.sh
 sh AUR/install-korla-icon-theme-v1.sh
-sh AUR/install-yaru-sound-theme-v1.sh
+#sh AUR/install-yaru-sound-theme-v1.sh
 sudo pacman -S --noconfirm --needed arc-gtk-theme
 sudo pacman -S --noconfirm --needed adapta-gtk-theme
 sudo pacman -S --noconfirm --needed materia-gtk-theme
