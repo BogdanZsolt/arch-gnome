@@ -14,6 +14,7 @@ sudo pacman -S --noconfirm --needed gnome-screenshot
 echo "Installing category Development"
 
 sh AUR/install-code-v*.sh
+sh AUR/install-local-by-flywheel-bin-v*.sh
 #sh AUR/install-sublime-text-v*.sh
 #sudo pacman -S --noconfirm --needed atom
 
@@ -53,6 +54,7 @@ sh AUR/install-screenkey-git-v*.sh
 sh AUR/install-xcursor-breeze-v*.sh
 sh AUR/install-yad-v*.sh
 sh AUR/install-korla-icon-theme-v1.sh
+sh AUR/install-lightdm-webkit-theme-aether.sh
 #sh AUR/install-yaru-sound-theme-v1.sh
 sudo pacman -S --noconfirm --needed arc-gtk-theme
 sudo pacman -S --noconfirm --needed adapta-gtk-theme

@@ -7,4 +7,5 @@ Native Window Placement
 OpenWeather
 Pamac Updates Indicator
 User Themes
+ShellTile
 
